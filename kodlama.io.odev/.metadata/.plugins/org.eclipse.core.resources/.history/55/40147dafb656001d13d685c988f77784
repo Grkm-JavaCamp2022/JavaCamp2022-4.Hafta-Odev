@@ -1,0 +1,82 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.SoftwareLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage;
+
+public class InMemorySoftwareLanguageRepository implements SoftwareLanguageRepository{
+	
+	List<SoftwareLanguage> softwareLanguages;
+	
+	
+	public InMemorySoftwareLanguageRepository() {
+		softwareLanguages = new ArrayList<SoftwareLanguage>();
+		softwareLanguages.add(new SoftwareLanguage(1, "C#"));
+		softwareLanguages.add(new SoftwareLanguage(2, "Java"));
+		softwareLanguages.add(new SoftwareLanguage(3, "Python"));
+	}
+	
+
+	@Override	//içinde programlama dilleri barındıran bir liste döndürüyoruz.
+	public List<SoftwareLanguage> getall() {
+		
+		return softwareLanguages;
+	}
+
+
+	@Override
+	public SoftwareLanguage getIdLanguage(int id) {
+		for (SoftwareLanguage test:softwareLanguages) {
+			if (test.getId() == id) {
+				return test;
+			}
+		}
+		return null;
+	}
+	
+	public boolean available (SoftwareLanguage softwareLanguage) {
+		boolean test = false;
+		for (SoftwareLanguage ctrl:softwareLanguages) {
+			if (softwareLanguage.getName().equals(ctrl.getName())) {
+				test = true;
+			}
+		}
+		return test;
+	}
+	
+	
+	@Override
+	public void add(SoftwareLanguage softwareLanguage) {
+		if (!available(softwareLanguage)) {
+			if (!softwareLanguage.getName().equals(null)) {
+				softwareLanguages.add(softwareLanguage);
+			}
+		}
+		
+	}
+
+
+	@Override
+	public void delete(int id) {
+		for (SoftwareLanguage ctrl:softwareLanguages) {
+			if (ctrl.getId() == id) {
+				softwareLanguages.remove(ctrl);
+			}
+		}
+		
+	}
+
+
+	@Override
+	public void update(SoftwareLanguage softwareLanguage) {
+		for (SoftwareLanguage ctrl:softwareLanguages) {
+			if (ctrl.getId() == softwareLanguage.getId()) {
+				ctrl.setId(ctrl.getId());
+				ctrl.setName(ctrl.getName());
+			}
+		}
+		
+	}
+}

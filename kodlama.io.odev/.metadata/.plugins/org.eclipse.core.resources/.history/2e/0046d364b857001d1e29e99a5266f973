@@ -1,0 +1,77 @@
+package kodlama.io.Kodlama.io.Devs.business.concretes;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.SoftwareLanguageService;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.SoftwareLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage;
+
+public class SoftwareLanguageManager implements SoftwareLanguageService{
+	
+	private SoftwareLanguageRepository languageRepository;
+	List<SoftwareLanguage> languages;
+	 
+	@Autowired
+	public SoftwareLanguageManager(SoftwareLanguageRepository languageRepository) {
+		super();
+		this.languageRepository = languageRepository;
+	}
+	
+	
+	public boolean isNameExist (SoftwareLanguage softwareLanguage) throws Exception{
+		boolean isName = false;
+		for (SoftwareLanguage lng:languages) {
+			if (lng.getName().equalsIgnoreCase(softwareLanguage.getName())) {
+				throw new Exception("Bu isim zaten mevcut. Tekrar edemez.");
+				
+			}
+			if (!softwareLanguage.getName().isEmpty()) {
+				throw new Exception("İsim boş olamaz ! ");
+			}
+			languageRepository.add(softwareLanguage);
+		}
+		return true;
+	}
+	
+	
+	public boolean isIdExist (int id) throws Exception{
+		for (SoftwareLanguage lng:languages) {
+			if (lng.getId() == id ) {
+				throw new Exception("Bu id zaten mevcut.");
+			}
+		}
+		return false;
+	}
+	
+	
+	@Override
+	public List<SoftwareLanguage> getall() {
+		
+		return languageRepository.getall();
+	}
+
+	@Override
+	public void add(SoftwareLanguage softwareLanguage) {
+		languageRepository.add(softwareLanguage);
+	}
+
+	@Override
+	public void delete(int id) {
+		languageRepository.delete(id);
+		
+	}
+
+	@Override
+	public void update(SoftwareLanguage softwareLanguage) {
+		languageRepository.update(softwareLanguage);
+	}
+
+	@Override
+	public SoftwareLanguage getIdLanguage(int id){
+		
+		return languageRepository.getIdLanguage(id);
+	}	
+}

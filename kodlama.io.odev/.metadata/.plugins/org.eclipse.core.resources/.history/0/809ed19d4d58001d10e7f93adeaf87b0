@@ -1,0 +1,18 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage;
+
+public interface SoftwareLanguageService {
+	List<SoftwareLanguage> getall();
+	
+	void add (SoftwareLanguage softwareLanguage) throws Exception;
+	
+	void delete (int id,SoftwareLanguage softwareLanguage) throws Exception;
+	
+	void update (SoftwareLanguage softwareLanguage) throws Exception;
+	
+	SoftwareLanguage getIdLanguage (int id);
+
+}

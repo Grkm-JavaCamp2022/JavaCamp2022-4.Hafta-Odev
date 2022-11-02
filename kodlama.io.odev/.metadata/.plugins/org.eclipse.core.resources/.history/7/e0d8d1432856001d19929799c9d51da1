@@ -1,0 +1,16 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.SoftwareLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage;
+
+public class InMemorySoftwareLanguageRepository implements SoftwareLanguageRepository{
+
+	@Override
+	public List<SoftwareLanguage> getall() {
+		
+		return null;
+	}
+	
+}

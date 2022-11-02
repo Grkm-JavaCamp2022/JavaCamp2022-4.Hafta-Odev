@@ -1,0 +1,49 @@
+package kodlama.io.Kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.SoftwareLanguageService;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.SoftwareLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage;
+
+public class SoftwareLanguageManager implements SoftwareLanguageService{
+	
+	private SoftwareLanguageRepository languageRepository;
+	
+	 
+	@Autowired
+	public SoftwareLanguageManager(SoftwareLanguageRepository languageRepository) {
+		super();
+		this.languageRepository = languageRepository;
+	}
+
+	@Override
+	public List<SoftwareLanguage> getall() {
+		
+		return languageRepository.getall();
+	}
+
+	@Override
+	public void add(SoftwareLanguage softwareLanguage) {
+		languageRepository.add(softwareLanguage);
+	}
+
+	@Override
+	public void delete(int id) {
+		languageRepository.delete(id);
+		
+	}
+
+	@Override
+	public void update(SoftwareLanguage softwareLanguage) {
+		languageRepository.update(softwareLanguage);
+	}
+
+	@Override
+	public SoftwareLanguage getIdLanguage(int id){
+		
+		return languageRepository.getIdLanguage(id);
+	}	
+}

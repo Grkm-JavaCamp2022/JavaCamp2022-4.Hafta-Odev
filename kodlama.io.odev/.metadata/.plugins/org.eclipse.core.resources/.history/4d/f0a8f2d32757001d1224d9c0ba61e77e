@@ -1,0 +1,65 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.SoftwareLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage;
+
+public class InMemorySoftwareLanguageRepository implements SoftwareLanguageRepository{
+	
+	List<SoftwareLanguage> softwareLanguages;
+	
+	
+	public InMemorySoftwareLanguageRepository() {
+		softwareLanguages = new ArrayList<SoftwareLanguage>();
+		softwareLanguages.add(new SoftwareLanguage(1, "C#"));
+		softwareLanguages.add(new SoftwareLanguage(2, "Java"));
+		softwareLanguages.add(new SoftwareLanguage(3, "Python"));
+	}
+	
+
+	@Override	//içinde programlama dilleri barındıran bir liste döndürüyoruz.
+	public List<SoftwareLanguage> getall() {
+		
+		return softwareLanguages;
+	}
+
+
+	@Override
+	public SoftwareLanguage getIdLanguage(int id) {
+		
+		softwareLanguages.add();
+	}
+
+
+	@Override
+	public void add(SoftwareLanguage softwareLanguage) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void update(SoftwareLanguage softwareLanguage) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public SoftwareLanguage idLanguage(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
+}

@@ -1,0 +1,42 @@
+package kodlama.io.Kodlama.io.Devs.wepApi.controllers;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.SoftwareLanguageService;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage;
+
+public class SoftwareLanguageController {
+	
+	private SoftwareLanguageService languageService;
+
+	
+	public SoftwareLanguageController(SoftwareLanguageService languageService) {
+		super();
+		this.languageService = languageService;
+	}
+	
+	
+	public List<SoftwareLanguage> getall() {
+		return languageService.getall();
+	}
+	
+	
+	public void add (SoftwareLanguage softwareLanguage) throws Exception {
+		languageService.add(softwareLanguage);
+	}
+	
+	
+	public void delete (int id, SoftwareLanguage softwareLanguage) throws Exception{
+		languageService.delete(id, softwareLanguage);
+	}
+	
+	
+	public void update (SoftwareLanguage softwareLanguage) throws Exception{
+		languageService.update(softwareLanguage);
+	}
+	
+	public SoftwareLanguage getIdLanguage (int id) {
+		return languageService.getIdLanguage(id);
+	}
+	
+}

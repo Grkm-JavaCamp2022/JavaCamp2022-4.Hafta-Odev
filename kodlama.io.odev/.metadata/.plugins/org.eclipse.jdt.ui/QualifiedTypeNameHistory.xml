@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="kodlama.io.Kodlama.io.Devs.dataAccess.concretes.InMemorySoftwareLanguageRepository"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.security.PublicKey"/>
+    <fullyQualifiedTypeName name="org.hibernate.query.criteria.internal.predicate.IsEmptyPredicate"/>
+    <fullyQualifiedTypeName name="kodlama.io.Kodlama.io.Devs.business.concretes.SoftwareLanguageManager"/>
+    <fullyQualifiedTypeName name="kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.SoftwareLanguageRepository"/>
+    <fullyQualifiedTypeName name="org.hibernate.loader.entity.NaturalIdEntityJoinWalker"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="kodlama.io.Kodlama.io.Devs.business.abstracts.SoftwareLanguageService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="kodlama.io.Kodlama.io.Devs.wepApi.controllers.SoftwareLanguageController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="kodlama.io.Kodlama.io.Devs.entities.concretes.SoftwareLanguage"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+</qualifiedTypeNameHistroy>
